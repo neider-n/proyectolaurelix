@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurelix | Perfumes</title>
+  <link rel="stylesheet" href="tienda.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <div id="nav-container"></div>
+
+  <div class="hero">
+    <div class="hero-texto">
+      <p class="hero-sub">Perfumes de lujo</p>
+      <h1>Tu esencia, <span>tu firma</span></h1>
+      <p class="hero-desc">Descubre fragancias exclusivas para cada momento, personalidad y ocasión.</p>
+      <button class="btn btn-rojo" onclick="scrollCatalogo()">Ver coleccion</button>
+    </div>
+  </div>
+
+  <section class="catalogo" id="catalogo">
+    <div class="catalogo-header">
+      <h2>Coleccion</h2>
+      <div class="filtros">
+        <input type="text" id="buscador" placeholder="Buscar perfume..." />
+        <select id="filtroCategoria">
+          <option value="">Todas las categorias</option>
+          <option value="arabes">Árabes</option>
+          <option value="americanos">Americanos</option>
+          <option value="yambal">Yambal</option>
+          <option value="avon">Avon</option>
+        </select>
+        <select id="filtroOrden">
+          <option value="">Ordenar por</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre A-Z</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid-productos" id="grid-productos"></div>
+  </section>
+
+  <section class="recomendaciones" id="recomendaciones">
+    <div class="recomendaciones-header">
+      <div>
+        <p class="recomendaciones-sub">Aurelix IA</p>
+        <h2>Encuentra tu aroma ideal</h2>
+      </div>
+      <p class="recomendaciones-explicacion">Cuéntanos tu estilo y te sugerimos la fragancia perfecta.</p>
+    </div>
+    <form class="asistente-ia" id="formAsistenteIA">
+      <input id="consultaIA" type="text" placeholder="Ej: quiero un perfume floral elegante por menos de 120" autocomplete="off" />
+      <button class="btn btn-rojo" type="submit">Recomendar</button>
+    </form>
+    <p class="respuesta-ia" id="respuestaIA">Escribe lo que buscas para recibir recomendaciones.</p>
+    <div class="grid-productos" id="grid-recomendaciones"></div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="tienda.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

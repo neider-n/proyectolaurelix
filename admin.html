@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Aurelix</title>
+  <link rel="stylesheet" href="tienda.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <div id="adminPanel">
+    <div class="admin-nav">
+      <a href="landing.html" class="logo">AURE<span>LIX</span></a>
+      <div>
+        <a class="admin-enlace" href="landing.html">Inicio</a>
+        <a class="admin-enlace" href="index.html">Tienda</a>
+        <span>Administrador</span>
+        <button class="btn-salir" id="btnAdminSalir">Salir</button>
+      </div>
+    </div>
+
+    <div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Panel Admin</h2>
+      <ul>
+        <li><a href="#" class="activo" id="linkProductos" onclick="mostrarSeccion('productos')">Productos</a></li>
+        <li><a href="#" id="linkAgregar" onclick="mostrarSeccion('agregar')">Publicar producto</a></li>
+        <li><a href="#" id="linkCompras" onclick="mostrarSeccion('compras')">Compras</a></li>
+      </ul>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="admin-contenido">
+
+      <!-- SECCION: LISTA DE PRODUCTOS -->
+      <section id="secProductos">
+        <div class="admin-header">
+          <h3>Todos los productos</h3>
+          <button class="btn btn-rojo" onclick="mostrarSeccion('agregar')">+ Publicar</button>
+        </div>
+        <div id="tablaProductos"></div>
+      </section>
+
+      <!-- SECCION: COMPRAS -->
+      <section id="secCompras" style="display:none;">
+        <div class="admin-header">
+          <h3>Compras recibidas</h3>
+        </div>
+        <div id="tablaCompras"></div>
+      </section>
+
+      <!-- SECCION: AGREGAR / EDITAR -->
+      <section id="secAgregar" style="display:none;">
+        <div class="admin-header">
+          <h3 id="tituloFormulario">Publicar producto</h3>
+        </div>
+
+        <form class="form-producto glass" id="formProducto">
+          <input type="hidden" id="productoId" />
+
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label>Nombre</label>
+              <input type="text" id="fNombre" placeholder="Nombre del producto" />
+              <span class="error-msg" id="eFNombre"></span>
+            </div>
+            <div class="form-grupo">
+              <label>Marca</label>
+              <input type="text" id="fMarca" placeholder="Marca" />
+              <span class="error-msg" id="eFMarca"></span>
+            </div>
+          </div>
+
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label>Precio (USD)</label>
+              <input type="number" id="fPrecio" placeholder="0.00" min="0" step="0.01" />
+              <span class="error-msg" id="eFPrecio"></span>
+            </div>
+            <div class="form-grupo">
+              <label>Categoria</label>
+              <select id="fCategoria">
+                <option value="">Seleccionar...</option>
+                <option value="arabes">Árabes</option>
+                <option value="americanos">Americanos</option>
+                <option value="yambal">Yambal</option>
+                <option value="avon">Avon</option>
+              </select>
+              <span class="error-msg" id="eFCategoria"></span>
+            </div>
+          </div>
+
+          <div class="form-grupo">
+            <label for="fImagenArchivo">Imagen del producto</label>
+            <input type="file" id="fImagenArchivo" accept="image/jpeg,image/png" />
+            <small class="ayuda-imagen">Formatos permitidos: JPG, JPEG o PNG. Maximo 2 MB.</small>
+            <img id="vistaPreviaImagen" class="vista-previa-imagen" alt="Vista previa de la imagen" />
+            <label for="fImagen">O usa una URL</label>
+            <input type="text" id="fImagen" placeholder="https://..." />
+            <span class="error-msg" id="eFImagen"></span>
+          </div>
+
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label>Presentaciones (separadas por coma)</label>
+              <input type="text" id="fPresentaciones" placeholder="50 ml, 100 ml" />
+              <span class="error-msg" id="eFPresentaciones"></span>
+            </div>
+            <div class="form-grupo">
+              <label>Beneficios (separados por coma)</label>
+              <input type="text" id="fBeneficios" placeholder="Piel seca, Hidratacion" />
+              <span class="error-msg" id="eFBeneficios"></span>
+            </div>
+          </div>
+
+          <div class="form-grupo">
+            <label>Descripcion</label>
+            <textarea id="fDescripcion" placeholder="Descripcion del producto..."></textarea>
+            <span class="error-msg" id="eFDescripcion"></span>
+          </div>
+
+          <div class="form-acciones">
+            <button type="button" class="btn btn-outline" onclick="mostrarSeccion('productos')">Cancelar</button>
+            <button type="button" class="btn btn-rojo" id="btnGuardar">Guardar producto</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMAR ELIMINAR -->
+  <div class="modal-overlay" id="modalEliminar">
+    <div class="modal glass">
+      <p>¿Seguro que quieres eliminar este producto?</p>
+      <div class="modal-acciones">
+        <button class="btn btn-outline" onclick="cerrarModal()">Cancelar</button>
+        <button class="btn btn-rojo" id="btnConfirmarEliminar">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="tienda.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

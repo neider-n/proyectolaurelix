@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurelix | Perfumes de lujo</title>
+  <link rel="stylesheet" href="tienda.css" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav-landing">
+    <div class="brand-inline">
+      <img src="aurelix-logo.svg" alt="Aurelix logo" class="brand-mark" />
+      <span class="logo">AURE<span>LIX</span></span>
+    </div>
+    <div class="nav-landing-links">
+      <a href="#productos">Coleccion</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="login.html" class="btn-nav-login">Ingresar</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-landing" id="inicio">
+    <div class="hero-contenido">
+      <p class="hero-eyebrow">Fragancias que marcan presencia</p>
+      <h1>Tu aroma,<br /><span>tu identidad</span></h1>
+      <p class="hero-descripcion">
+        Colecciones elegantes para cada momento del dia.<br />
+        Sensaciones florales, orientales, amaderadas y frescas.
+      </p>
+      <div class="hero-botones">
+        <a href="login.html" class="btn btn-rojo">Descubrir perfumes</a>
+        <a href="#productos" class="btn btn-outline">Ver catalogo</a>
+      </div>
+    </div>
+    <div class="hero-imagen">
+      <div class="hero-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80" alt="Perfumes Aurelix" />
+        <div class="hero-badge">Nuevo</div>
+      </div>
+    </div>
+    <div class="hero-scroll" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+      <span>&#8595;</span>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <h3>+1200</h3>
+      <p>Clientes felices</p>
+    </div>
+    <div class="stat">
+      <h3>18</h3>
+      <p>Fragancias exclusivas</p>
+    </div>
+    <div class="stat">
+      <h3>4.9</h3>
+      <p>Valoracion media</p>
+    </div>
+    <div class="stat">
+      <h3>48h</h3>
+      <p>Envio express</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS DESTACADOS -->
+  <section class="seccion" id="productos">
+    <div class="seccion-header">
+      <p class="seccion-sub">Coleccion destacada</p>
+      <h2>Fragancias que inspiran</h2>
+    </div>
+    <div class="grid-landing" id="gridDestacados"></div>
+    <div class="seccion-footer">
+      <a href="login.html" class="btn btn-outline">Ver todos los perfumes</a>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="seccion seccion-nosotros" id="nosotros">
+    <div class="nosotros-imagen">
+      <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80" alt="Perfumes de lujo" />
+    </div>
+    <div class="nosotros-texto">
+      <p class="seccion-sub">Quienes somos</p>
+      <h2>Perfumes pensados para dejar huella</h2>
+      <p>En Aurelix reunimos fragancias cuidadas, elegantes y memorables para acompañarte con estilo en cada momento.</p>
+      <p>Trabajamos con notas intensas, delicadas y sofisticadas para ayudarte a encontrar tu aroma perfecto.</p>
+      <div class="nosotros-valores">
+        <div class="valor">
+          <span>&#10003;</span>
+          <p>Notas premium</p>
+        </div>
+        <div class="valor">
+          <span>&#10003;</span>
+          <p>Envio discreto</p>
+        </div>
+        <div class="valor">
+          <span>&#10003;</span>
+          <p>Fragrancias exclusivas</p>
+        </div>
+        <div class="valor">
+          <span>&#10003;</span>
+          <p>Asesoria personalizada</p>
+        </div>
+      </div>
+      <a href="login.html" class="btn btn-rojo">Conoce Aurelix</a>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="seccion equipo" id="equipo">
+    <div class="seccion-header">
+      <p class="seccion-sub">Nuestro equipo</p>
+      <h2>Especialistas en aroma y estilo</h2>
+    </div>
+    <div class="equipo-grid">
+      <article class="persona"><span class="persona-inicial">D</span><h3>Danna Judith Mendoza Nieto </h3><p>Director creativo</p><span class="persona-rol">Diseña la esencia de la marca Aurelix</span></article>
+      <article class="persona"><span class="persona-inicial">D</span><h3>Daileth Melissa Barrios Fragoso</h3><p>Perfumer</p><span class="persona-rol">Selecciona aromas y notas premium</span></article>
+      <article class="persona"><span class="persona-inicial">L</span><h3>Lizania Puerta Torres</h3><p>Asesora de fragancias</p><span class="persona-rol">Guía tu elección según tu estilo</span></article>
+      <article class="persona"><span class="persona-inicial">D</span><h3>Daileth Melissa Barrios Fragoso</h3><p>Cliente VIP</p><span class="persona-rol">Experiencia premium antes y despues de tu compra</span></article>
+      <article class="persona"><span class="persona-inicial">D</span><h3>Danna Judith Mendoza Nieto </h3><p>Logistica</p><span class="persona-rol">Preparacion y envio de pedidos</span></article>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="seccion contacto" id="contacto">
+    <div class="contacto-info">
+      <p class="seccion-sub">Contacto</p>
+      <h2>Estamos para ayudarte</h2>
+      <p>Escribenos si necesitas asesoría para elegir un perfume, consultar un pedido o una fragancia especial.</p>
+      <div class="contacto-datos">
+        <p><strong>Correo:</strong> hola@aurelix.com</p>
+        <p><strong>WhatsApp:</strong> +57 300 456 7890</p>
+        <p><strong>Horario:</strong> Lunes a sabado, 9:00 a.m. a 7:00 p.m.</p>
+      </div>
+    </div>
+    <form class="contacto-form" onsubmit="event.preventDefault(); mostrarMensajeContacto();">
+      <input type="text" id="contactoNombre" placeholder="Tu nombre" required />
+      <input type="email" id="contactoCorreo" placeholder="Tu correo" required />
+      <textarea id="contactoMensaje" placeholder="¿En que podemos ayudarte?" required></textarea>
+      <button class="btn btn-rojo" type="submit">Enviar mensaje</button>
+      <p class="contacto-confirmacion" id="contactoConfirmacion"></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-landing">
+    <span class="logo">AURE<span>LIX</span></span>
+    <p>Fragancias de lujo &mdash; 2026</p>
+    <a href="login.html" class="btn btn-rojo">Ingresar a la tienda</a>
+  </footer>
+
+  <script src="tienda.js"></script>
+  <script src="landing.js"></script>
+</body>
+</html>

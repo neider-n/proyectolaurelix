@@ -1,0 +1,28 @@
+<svg width="520" height="360" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aurelix logo">
+  <defs>
+    <linearGradient id="gold" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4d0"/>
+      <stop offset="18%" stop-color="#f0d992"/>
+      <stop offset="38%" stop-color="#d4af6d"/>
+      <stop offset="60%" stop-color="#b9873a"/>
+      <stop offset="82%" stop-color="#f3dca0"/>
+      <stop offset="100%" stop-color="#a7772d"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#fbe9a8"/>
+      <stop offset="50%" stop-color="#d4af6d"/>
+      <stop offset="100%" stop-color="#9a6a2d"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(110,10)">
+    <path d="M120 20 L155 8 L180 20 L203 8 L236 20 L220 52 L180 44 L155 56 L110 52 Z" fill="url(#gold)" stroke="#8f6928" stroke-width="2"/>
+    <circle cx="155" cy="10" r="8" fill="url(#gold)" stroke="#8f6928" stroke-width="2"/>
+    <circle cx="180" cy="12" r="8" fill="url(#gold)" stroke="#8f6928" stroke-width="2"/>
+    <circle cx="205" cy="10" r="8" fill="url(#gold)" stroke="#8f6928" stroke-width="2"/>
+    <path d="M101 52 L160 170 L215 52" fill="none" stroke="url(#gold)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M95 52 L160 165 L226 52" fill="none" stroke="#8f6928" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <path d="M118 90 C135 125, 150 145, 160 155 C170 145, 186 120, 203 90" fill="none" stroke="url(#goldSoft)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M117 80 C140 95, 152 103, 160 110 C170 104, 182 94, 204 80" fill="none" stroke="url(#goldSoft)" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>

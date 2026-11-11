@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Aurelix</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+  <div class="brand-header">
+    <img src="aurelix-logo.svg" alt="Aurelix logo" class="brand-logo" />
+    <p class="logo-titulo">AURE<span>LIX</span></p>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="vista activa" id="vistaLogin">
+    <h1>login</h1>
+
+    <div class="input-group">
+      <input type="text" id="loginUsuario" placeholder="Usuario" />
+      <span class="error-msg" id="errLoginUsuario"></span>
+    </div>
+    <div class="input-group">
+      <input type="password" id="loginPassword" placeholder="Contrasena" />
+      <span class="error-msg" id="errLoginPassword"></span>
+    </div>
+
+    <div class="options">
+      <label class="remember">
+        <input type="checkbox" id="recuerdame" />
+        Recuerdame
+      </label>
+      <a href="#" class="forgot">Olvide mi contrasena</a>
+    </div>
+
+    <button class="btn-primary" id="btnLogin">Ingresar</button>
+    <p class="pie">No tienes cuenta? <a id="irRegistro">Registrate</a></p>
+  </div>
+
+  <!-- REGISTRO -->
+  <div class="vista" id="vistaRegistro">
+    <h1>registro</h1>
+
+    <div class="input-group">
+      <input type="text" id="regUsuario" placeholder="Usuario" />
+      <span class="error-msg" id="errRegUsuario"></span>
+    </div>
+    <div class="input-group">
+      <input type="email" id="regEmail" placeholder="Correo electronico" />
+      <span class="error-msg" id="errRegEmail"></span>
+    </div>
+    <div class="input-group">
+      <input type="password" id="regPassword" placeholder="Contrasena" />
+      <span class="error-msg" id="errRegPassword"></span>
+    </div>
+    <div class="input-group">
+      <input type="password" id="regConfirm" placeholder="Confirmar contrasena" />
+      <span class="error-msg" id="errRegConfirm"></span>
+    </div>
+
+    <button class="btn-primary" id="btnRegistro">Crear cuenta</button>
+    <p class="pie">Ya tienes cuenta? <a id="irLogin">Iniciar sesion</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="login.js"></script>
+</body>
+</html>
